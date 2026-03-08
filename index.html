@@ -117,7 +117,7 @@ display:flex;
 justify-content:center;
 gap:70px;
 padding:90px 20px;
-background:#0d1117;
+background:rgba(13,17,23,0.85);
 }
 
 .column{
@@ -154,7 +154,7 @@ color:white;
 /* DAILY LOG */
 
 .log{
-background:#111;
+background:rgba(17,17,17,0.85);
 padding:70px 20px;
 text-align:center;
 }
@@ -175,7 +175,7 @@ border-radius:8px;
 /* CONTACT */
 
 .contact{
-background:black;
+background:rgba(0,0,0,0.9);
 padding:70px 20px;
 text-align:center;
 }
@@ -198,6 +198,8 @@ color:white;
 
 /* STARFIELD BACKGROUND */
 
+/* STARFIELD BACKGROUND */
+
 .stars{
 position:fixed;
 top:0;
@@ -205,37 +207,32 @@ left:0;
 width:100%;
 height:100%;
 background:black;
-z-index:-3;
+z-index:-5;
+overflow:hidden;
 }
-
-/* SMALL STARS */
 
 .stars::before{
 content:"";
 position:absolute;
-width:100%;
-height:100%;
+width:200%;
+height:200%;
 background-image:
 radial-gradient(1px 1px at 20px 30px, white, transparent),
-radial-gradient(1px 1px at 40px 70px, white, transparent),
-radial-gradient(1px 1px at 90px 40px, white, transparent),
-radial-gradient(1px 1px at 130px 80px, white, transparent),
-radial-gradient(1px 1px at 160px 30px, white, transparent);
+radial-gradient(1px 1px at 50px 80px, white, transparent),
+radial-gradient(1px 1px at 120px 60px, white, transparent),
+radial-gradient(1px 1px at 200px 150px, white, transparent),
+radial-gradient(2px 2px at 300px 200px, white, transparent),
+radial-gradient(2px 2px at 400px 50px, white, transparent),
+radial-gradient(1px 1px at 500px 250px, white, transparent);
 background-repeat:repeat;
-background-size:200px 200px;
-animation:moveStars 200s linear infinite;
-opacity:0.8;
+background-size:600px 600px;
+animation:starDrift 150s linear infinite;
+opacity:0.9;
 }
 
-/* STAR MOVEMENT */
-
-@keyframes moveStars{
-from{
-transform:translateY(0px);
-}
-to{
-transform:translateY(-1000px);
-}
+@keyframes starDrift{
+from{transform:translateY(0);}
+to{transform:translateY(-800px);}
 }
 </style>
 
