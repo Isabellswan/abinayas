@@ -199,80 +199,53 @@ text-decoration:none;
 color:white;
 }
 
-/* STAR BACKGROUND */
-
-.stars, .twinkling{
-position:fixed;
-top:0;
-left:0;
-right:0;
-bottom:0;
-display:block;
-z-index:-1;
-}
-
-/* STAR BACKGROUND LAYERS */
+/* STARFIELD BACKGROUND */
 
 .stars{
 position:fixed;
 top:0;
 left:0;
-right:0;
-bottom:0;
+width:100%;
+height:100%;
 background:black;
 z-index:-3;
 }
 
 /* SMALL STARS */
 
-.stars::after{
+.stars::before{
 content:"";
 position:absolute;
-width:2px;
-height:2px;
-background:white;
-box-shadow:
-100px 200px white,
-300px 400px white,
-500px 100px white,
-700px 300px white,
-900px 500px white,
-1100px 150px white,
-1300px 350px white,
-1500px 250px white,
-1700px 450px white,
-1900px 100px white;
-}
-
-/* MOVING STAR LAYER */
-
-.twinkling{
-position:fixed;
-top:0;
-left:0;
-right:0;
-bottom:0;
-background-image:url("https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/starfield.png");
+width:100%;
+height:100%;
+background-image:
+radial-gradient(1px 1px at 20px 30px, white, transparent),
+radial-gradient(1px 1px at 40px 70px, white, transparent),
+radial-gradient(1px 1px at 90px 40px, white, transparent),
+radial-gradient(1px 1px at 130px 80px, white, transparent),
+radial-gradient(1px 1px at 160px 30px, white, transparent);
 background-repeat:repeat;
-animation:moveStars 120s linear infinite;
+background-size:200px 200px;
+animation:moveStars 200s linear infinite;
 opacity:0.8;
-z-index:-2;
 }
 
 /* STAR MOVEMENT */
 
 @keyframes moveStars{
-from{background-position:0 0;}
-to{background-position:-5000px 2000px;}
+from{
+transform:translateY(0px);
 }
-
+to{
+transform:translateY(-1000px);
+}
+}
 </style>
 
 </head>
 
 <body>
 <div class="stars"></div>
-<div class="twinkling"></div>
 
 <section class="hero">
 
