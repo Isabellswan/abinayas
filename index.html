@@ -1,31 +1,300 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>My Portfolio</title>
+
+<title>Portfolio of Abinaya S</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* GENERAL */
+
+body{
+margin:0;
+font-family:'Inter', sans-serif;
+color:white;
+background:black;
+}
+
+/* HERO BACKGROUND */
+
+.hero{
+height:100vh;
+background:
+url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3") center/cover no-repeat;
+position:relative;
+padding:60px;
+}
+
+/* DARK OVERLAY */
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.6);
+}
+
+/* CONTENT ABOVE OVERLAY */
+
+.content{
+position:relative;
+z-index:2;
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.title{
+font-family:'Orbitron', sans-serif;
+font-size:36px;
+letter-spacing:2px;
+}
+
+/* PROFILE */
+
+.profile{
+text-align:right;
+}
+
+.profile img{
+width:140px;
+border-radius:50%;
+border:3px solid white;
+}
+
+/* INTRO TEXT */
+
+.intro{
+margin-top:120px;
+max-width:750px;
+text-align:center;
+margin-left:auto;
+margin-right:auto;
+animation:fadeUp 1.8s;
+}
+
+.intro h1{
+font-family:'Orbitron';
+font-size:42px;
+margin-bottom:20px;
+}
+
+.intro p{
+font-size:18px;
+line-height:1.7;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* COLUMN SECTION */
+
+.columns{
+display:flex;
+justify-content:center;
+gap:70px;
+padding:90px 20px;
+background:#0d1117;
+}
+
+.column{
+background:#161b22;
+padding:40px;
+border-radius:12px;
+width:320px;
+text-align:left;
+transition:transform 0.3s;
+}
+
+.column:hover{
+transform:translateY(-10px);
+}
+
+.column h2{
+font-family:'Orbitron';
+text-align:center;
+margin-bottom:25px;
+}
+
+.column a{
+display:block;
+color:#58a6ff;
+margin:12px 0;
+text-decoration:none;
+font-size:16px;
+}
+
+.column a:hover{
+color:white;
+}
+
+/* DAILY LOG */
+
+.log{
+background:#111;
+padding:70px 20px;
+text-align:center;
+}
+
+.log h2{
+font-family:'Orbitron';
+margin-bottom:30px;
+}
+
+.logbox{
+background:#1c1c1c;
+padding:20px;
+margin:10px auto;
+max-width:500px;
+border-radius:8px;
+}
+
+/* CONTACT */
+
+.contact{
+background:black;
+padding:70px 20px;
+text-align:center;
+}
+
+.contact h2{
+font-family:'Orbitron';
+margin-bottom:20px;
+}
+
+.contact a{
+color:#58a6ff;
+margin:10px;
+display:inline-block;
+text-decoration:none;
+}
+
+.contact a:hover{
+color:white;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h1>Welcome to My Scientific Portfolio</h1>
 
-<p>Hello, I am an Electrical and Electronics Engineering (Sandwich) graduate from PSG College of Technology.</p>
+<section class="hero">
 
-<h2>Research Interests</h2>
-<ul>
-<li>Astrophysics</li>
-<li>Particle Physics</li>
-<li>Energy Engineering</li>
-</ul>
+<div class="content">
 
-<h2>Projects</h2>
-<ul>
-<li>Orbital Mechanics Simulation</li>
-<li>Galaxy Rotation Curve Modelling</li>
-<li>Cosmology Expansion Model</li>
-</ul>
+<div class="header">
 
-<h2>Workshops and Lectures</h2>
-<p>I regularly attend scientific seminars and physics lectures.</p>
+<div class="title">
+Portfolio of Abinaya S
+</div>
+
+<div class="profile">
+<img src="profile.jpg">
+<br>
+<b>Isabella Swan</b>
+</div>
+
+</div>
+
+
+<div class="intro">
+
+<h1>Abinaya S</h1>
+
+<p>
+Electrical and Electronics Engineering (Sandwich) graduate from PSG College of Technology exploring the intersection of space science, physics and engineering.  
+My aspiration is to become both a space engineer and a space scientist, contributing to the development of space technology while advancing scientific understanding of the universe.  
+Through continuous learning, research engagement and technical projects, I aim to build a career dedicated to exploration, discovery and innovation in space science.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="columns">
+
+<div class="column">
+
+<h2>Space Engineer</h2>
+
+<a href="#">Projects</a>
+<a href="#">Lectures / Conferences</a>
+<a href="#">Workshops</a>
+<a href="#">Internships</a>
+<a href="#">Courses</a>
+
+</div>
+
+
+<div class="column">
+
+<h2>Space Scientist</h2>
+
+<a href="#">Projects</a>
+<a href="#">Lectures / Conferences</a>
+<a href="#">Workshops</a>
+<a href="#">Internships</a>
+<a href="#">Courses</a>
+
+</div>
+
+</section>
+
+
+
+<section class="log">
+
+<h2>Daily Log</h2>
+
+<div class="logbox">
+Attended online lecture on astrophysics and JWST observations.
+</div>
+
+<div class="logbox">
+Started building my scientific portfolio website and research roadmap.
+</div>
+
+</section>
+
+
+
+<section class="contact">
+
+<h2>Contact</h2>
+
+<a href="#">LinkedIn</a>
+<a href="#">Instagram</a>
+<a href="#">GitHub</a>
+
+</section>
+
 
 </body>
+
 </html>
