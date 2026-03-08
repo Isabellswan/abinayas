@@ -235,6 +235,57 @@ opacity:0.9;
 from{transform:translateY(0);}
 to{transform:translateY(-800px);}
 }
+
+.nebula{
+position:fixed;
+top:0;
+left:0;
+width:200%;
+height:200%;
+z-index:-2;
+background:
+radial-gradient(circle at 30% 40%, rgba(120,0,255,0.2), transparent 60%),
+radial-gradient(circle at 70% 60%, rgba(0,120,255,0.18), transparent 60%),
+radial-gradient(circle at 50% 20%, rgba(255,0,200,0.15), transparent 60%);
+animation:nebulaMove 300s linear infinite;
+}
+
+@keyframes nebulaMove{
+from{transform:translateX(0);}
+to{transform:translateX(-500px);}
+}
+
+.shooting-star{
+position:fixed;
+top:-100px;
+left:10%;
+width:2px;
+height:80px;
+background:linear-gradient(white, transparent);
+opacity:0.8;
+animation:shoot 8s linear infinite;
+}
+
+.shooting-star:nth-child(2){
+left:40%;
+animation-delay:3s;
+}
+
+.shooting-star:nth-child(3){
+left:70%;
+animation-delay:6s;
+}
+
+@keyframes shoot{
+0%{
+transform:translate(0,0) rotate(45deg);
+opacity:1;
+}
+100%{
+transform:translate(1200px,600px) rotate(45deg);
+opacity:0;
+}
+}
 </style>
 
 </head>
@@ -242,6 +293,11 @@ to{transform:translateY(-800px);}
 <body>
 
 <div class="stars"></div>
+<div class="nebula"></div>
+
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
 
 <section class="hero">
 
