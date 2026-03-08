@@ -18,6 +18,7 @@ color:white;
 background:black;
 }
 
+
 /* HERO BACKGROUND */
 
 .hero{
@@ -197,12 +198,42 @@ text-decoration:none;
 color:white;
 }
 
+/* STAR BACKGROUND */
+
+.stars, .twinkling{
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+display:block;
+z-index:-1;
+}
+
+.stars{
+background:black url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+}
+
+.twinkling{
+background:transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+animation:moveStars 200s linear infinite;
+opacity:0.6;
+}
+
+/* STAR MOVEMENT */
+
+@keyframes moveStars{
+from{background-position:0 0;}
+to{background-position:-10000px 5000px;}
+}
+
 </style>
 
 </head>
 
 <body>
-
+<div class="stars"></div>
+<div class="twinkling"></div>
 
 <section class="hero">
 
